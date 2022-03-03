@@ -1,75 +1,65 @@
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
-//        String[][] names = new String[3][4];
-//        String[] row1 = {"Abby", "Don", "George", "Dan"};
-//        String[] row2 = {"Brian", "Elenor", "Ryan", "David"};
-//        String[] row3 = {"Cathy", "Fred", "Jed", "Matt"};
-//        names[0] = row1;
-//        names[1] = row2;
-//        names[2] = row3;
-//
-//        for (String[] row : names){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//        names[1][2] = "Paul";
-//        for (String[] row : names){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//        String temp = names[0][0];
-//        names[0][0] = names[2][3];
-//        names[2][3] = temp;
-//        for (String[] row : names){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//
-//        String[] temporary = names[0];
-//        names[0] = names[1];
-//        names[1] = temporary;
-//        for (String[] row : names){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//        int[][] list1 = new int[2][3];
-//        int[][] list2 = new int[3][2];
-//
-//        for (int[] row : list1){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//        for (int[] row : list2){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println("---------------------");
-//        list1[0][0] = 1;
-//        list1[0][1] = 2;
-//        list1[0][2] =3 ;
-//        list1[1][0] = 4;
-//        list1[1][1] = 5;
-//        list1[1][2] = 6;
-//        for (int[] row : list1){
-//            System.out.println(Arrays.toString(row));
-//        }
-//
-//
-//        System.out.println("---------------------");
-//        list2[0][0] = 1;
-//        list2[0][1] = 4;
-//        list2[1][0] =2 ;
-//        list2[1][1] = 5;
-//        list2[2][0] = 3;
-//        list2[2][1] = 6;
-//        for (int[] row : list2){
-//            System.out.println(Arrays.toString(row));
-//        }
-//        System.out.println(list1[0][2] + list2[2][0]);
-        int[][] list1 = {{}};
-        System.out.println(FunWith2DArrays.totalElements(list1));
+        System.out.println("PROBLEM 1:");
 
-        String[][] list2 = {{"time"}};
-        FunWith2DArrays.fourCorners(list2);
+        int[][] testArr1 = {{1, 2}, {3, 4}, {5, 6}};
+        // write code below that uses nested INDEX-BASED for loops
+        // to print each element in testArr1 in ROW-MAJOR order; i.e. 1, 2, 3, 4, 5, 6
+        for (int i = 0; i < testArr1.length; i++){
+            for (int k = 0; k < testArr1[0].length; k++){
+                System.out.println(testArr1[i][k]);
+            }
+        }
+        /* WRITE CODE HERE! */
+
+        System.out.println("---------");
+        // now, write code below that uses nested ENHANCED for loops
+        // to print each element in testArr1 in row-major order AGAIN; i.e. 1, 2, 3, 4, 5, 6
+        for (int[] row: testArr1){
+            for (int element: row){
+                System.out.println(element);
+            }
+        }
+        /* WRITE CODE HERE! */
+
+        System.out.println("---------");
+        // lastly, write code below that uses nested INDEX-BASED for loops
+        // to print each element in testArr1 in COLUMN-MAJOR order; i.e. 1, 3, 5, 2, 4, 6
+
+        /* WRITE CODE HERE! */
+        for (int c = 0; c < testArr1[0].length; c++){
+            for (int r = 0; r < testArr1.length; r++){
+                System.out.println(testArr1[r][c]);
+            }
+        }
+
+        /* --- PROBLEM 2 --- */
+        System.out.println("---------");
+        System.out.println("PROBLEM 2:");
+
+        String[][] testArr2 = {{"ant", "bird", "camel"}, {"dog", "elephant", "fish"}};
+        // write code below using a nested ENHANCED for loop to print each element in
+        // testArr2 in ROW-MAJOR order; i.e. ant, bird, camel, dog, elephant, fish
+
+        /* WRITE CODE HERE! */
+        for (String[] row: testArr2){
+            for (String element: row){
+                System.out.println(element);
+            }
+        }
+
+        System.out.println("---------");
+        // write code below using an INDEX-BASED nested for loop to print each element in
+        // testArr2 in COLUMN-MAJOR order; i.e. ant, dog, bird, elephant, camel, fish
+
+        /* WRITE CODE HERE! */
+        for (int i = 0; i < testArr2[0].length; i++){
+            for (int k = 0; k < testArr2.length; k++){
+                System.out.println(testArr2[k][i]);
+            }
+        }
+
+
     }
 }
